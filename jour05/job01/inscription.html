@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - Jour 05</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Jour 05</h1>
+        <nav>
+            <a href="inscription.html" class="btn active">Inscription</a>
+            <a href="connexion.html" class="btn">Connexion</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Zone d'affichage des erreurs globales -->
+        <div id="global-errors" class="global-errors" role="alert" aria-live="polite"></div>
+
+        <div class="form-container wide">
+            <h2>Inscription</h2>
+
+            <form id="registerForm" novalidate autocomplete="off">
+                <!-- Protection CSRF (simulée côté front) -->
+                <input type="hidden" name="csrf_token" id="csrf_token">
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="prenom">Prénom</label>
+                        <input type="text" id="prenom" name="prenom" placeholder="Jean" autocomplete="given-name"
+                            minlength="2" maxlength="50" required aria-describedby="prenom-error">
+                        <span class="error-message" id="prenom-error" role="alert"></span>
+                        <span class="helper-text">Entre 2 et 50 caractères</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nom">Nom</label>
+                        <input type="text" id="nom" name="nom" placeholder="Dupont" autocomplete="family-name"
+                            minlength="2" maxlength="50" required aria-describedby="nom-error">
+                        <span class="error-message" id="nom-error" role="alert"></span>
+                        <span class="helper-text">Entre 2 et 50 caractères</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="exemple@domaine.fr" autocomplete="email"
+                        required aria-describedby="email-error">
+                    <span class="error-message" id="email-error" role="alert"></span>
+                    <span class="success-message" id="email-success"></span>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="password">Mot de passe</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="password" name="password" placeholder="••••••••"
+                                autocomplete="new-password" minlength="8" required aria-describedby="password-error">
+                            <button type="button" class="toggle-password" aria-label="Afficher le mot de passe">
+                                👁️
+                            </button>
+                        </div>
+                        <span class="error-message" id="password-error" role="alert"></span>
+                        <div class="password-strength" id="password-strength">
+                            <div class="strength-bar"><span></span></div>
+                            <span class="strength-text"></span>
+                        </div>
+                        <span class="helper-text">Minimum 8 caractères, 1 lettre, 1 chiffre et 1 caractère
+                            spécial</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password_confirm">Confirmation du mot de passe</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="password_confirm" name="password_confirm" placeholder="••••••••"
+                                autocomplete="new-password" required aria-describedby="password_confirm-error">
+                            <button type="button" class="toggle-password" aria-label="Afficher le mot de passe">
+                                👁️
+                            </button>
+                        </div>
+                        <span class="error-message" id="password_confirm-error" role="alert"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="adresse">Adresse</label>
+                    <input type="text" id="adresse" name="adresse" placeholder="123 Rue de la Paix"
+                        autocomplete="street-address" minlength="5" maxlength="200" required
+                        aria-describedby="adresse-error">
+                    <span class="error-message" id="adresse-error" role="alert"></span>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group small">
+                        <label for="code_postal">Code postal</label>
+                        <input type="text" id="code_postal" name="code_postal" placeholder="75001"
+                            autocomplete="postal-code" pattern="[0-9]{5}" maxlength="5" required
+                            aria-describedby="code_postal-error">
+                        <span class="error-message" id="code_postal-error" role="alert"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ville">Ville</label>
+                        <input type="text" id="ville" name="ville" placeholder="Paris" autocomplete="address-level2"
+                            minlength="2" maxlength="100" required aria-describedby="ville-error">
+                        <span class="error-message" id="ville-error" role="alert"></span>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    <span class="btn-text">S'inscrire</span>
+                    <span class="btn-loader"></span>
+                </button>
+            </form>
+
+            <p class="form-footer">
+                Déjà un compte ? <a href="connexion.html">Se connecter</a>
+            </p>
+        </div>
+    </main>
+
+    <script src="validation.js"></script>
+    <script src="inscription.js"></script>
+</body>
+
+</html>
