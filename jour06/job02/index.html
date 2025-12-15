@@ -191,7 +191,8 @@
                 </div>
                 <div class="col-lg-4 text-center mt-4 mt-lg-0">
                     <!-- Spinner dont la couleur change via le formulaire -->
-                    <div class="spinner-border text-light" role="status" id="mainSpinner" style="width: 5rem; height: 5rem;">
+                    <div class="spinner-border text-light" role="status" id="mainSpinner"
+                        style="width: 5rem; height: 5rem;">
                         <span class="visually-hidden">Chargement...</span>
                     </div>
                 </div>
@@ -219,20 +220,16 @@
                                 <button class="btn btn-danger" id="progressMinus">
                                     <i class="bi bi-dash-lg"></i>
                                 </button>
-                                
+
                                 <!-- Progress bar -->
                                 <div class="progress flex-grow-1">
-                                    <div class="progress-bar progress-bar-striped progress-bar-animated" 
-                                         role="progressbar" 
-                                         id="progressBar"
-                                         style="width: 50%;" 
-                                         aria-valuenow="50" 
-                                         aria-valuemin="0" 
-                                         aria-valuemax="100">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                        role="progressbar" id="progressBar" style="width: 50%;" aria-valuenow="50"
+                                        aria-valuemin="0" aria-valuemax="100">
                                         <span id="progressValue">50%</span>
                                     </div>
                                 </div>
-                                
+
                                 <!-- Bouton augmenter -->
                                 <button class="btn btn-success" id="progressPlus">
                                     <i class="bi bi-plus-lg"></i>
@@ -244,7 +241,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Colonne droite : Liste groupée -->
                 <div class="col-lg-6">
                     <div class="card shadow-sm">
@@ -452,12 +449,13 @@
                                 </div>
                             </form>
                             <p class="text-muted small mb-0">
-                                <i class="bi bi-keyboard me-2"></i>Appuyez sur <kbd>D</kbd> + <kbd>G</kbd> + <kbd>C</kbd> (dans l'ordre) pour voir le récapitulatif.
+                                <i class="bi bi-keyboard me-2"></i>Appuyez sur <kbd>D</kbd> + <kbd>G</kbd> +
+                                <kbd>C</kbd> (dans l'ordre) pour voir le récapitulatif.
                             </p>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Formulaire droite : Login (change couleur spinner) -->
                 <div class="col-lg-6">
                     <div class="card shadow-sm">
@@ -468,18 +466,21 @@
                             <form id="loginForm">
                                 <div class="mb-3">
                                     <label for="loginEmail" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="loginEmail" placeholder="votre@email.com" required>
+                                    <input type="email" class="form-control" id="loginEmail"
+                                        placeholder="votre@email.com" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="loginPassword" class="form-label">Mot de passe</label>
-                                    <input type="password" class="form-control" id="loginPassword" placeholder="••••••••" required>
+                                    <input type="password" class="form-control" id="loginPassword"
+                                        placeholder="••••••••" required>
                                 </div>
                                 <button type="submit" class="btn btn-dark w-100">
                                     <i class="bi bi-unlock me-2"></i>Se connecter
                                 </button>
                             </form>
                             <p class="text-muted small mt-3 mb-0">
-                                <i class="bi bi-palette me-2"></i>Valider avec email et mot de passe non vides change la couleur du spinner.
+                                <i class="bi bi-palette me-2"></i>Valider avec email et mot de passe non vides change la
+                                couleur du spinner.
                             </p>
                         </div>
                     </div>
@@ -500,7 +501,8 @@
                     <h5 class="modal-title" id="dgcModalLabel">
                         <i class="bi bi-keyboard me-2"></i>Récapitulatif (D+G+C)
                     </h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Fermer"></button>
                 </div>
                 <div class="modal-body">
                     <div class="alert alert-info">
