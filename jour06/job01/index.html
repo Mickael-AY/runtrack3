@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job 01 - Bootstrap</title>
+
+    <!-- Bootstrap 5 CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Custom styles (minimal, Bootstrap fait le gros du travail) -->
+    <style>
+        /* Style personnalisé pour le hero */
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 400px;
+        }
+
+        /* Ombre douce sur les cards */
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Footer style */
+        footer {
+            background-color: #343a40;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+    ============================================
+    NAVBAR - Barre de navigation responsive
+    Utilise les classes Bootstrap :
+    - navbar, navbar-expand-lg : navigation responsive
+    - navbar-dark bg-dark : thème sombre
+    - container : conteneur centré avec marges
+    ============================================
+    -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <!-- Logo / Marque -->
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-bootstrap-fill me-2"></i>MonSite
+            </a>
+
+            <!-- Bouton hamburger pour mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Liens de navigation -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">À propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 
+    ============================================
+    HERO SECTION - Section d'accroche principale
+    Utilise les classes Bootstrap :
+    - text-white : texte blanc
+    - d-flex, align-items-center : flexbox centré
+    - py-5 : padding vertical
+    ============================================
+    -->
+    <section class="hero-section text-white d-flex align-items-center py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">Bienvenue sur MonSite</h1>
+                    <p class="lead mb-4">
+                        Découvrez nos services et solutions adaptés à vos besoins.
+                        Une expérience utilisateur optimale grâce à Bootstrap 5.
+                    </p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="#services" class="btn btn-light btn-lg">
+                            <i class="bi bi-arrow-right-circle me-2"></i>Découvrir
+                        </a>
+                        <a href="#contact" class="btn btn-outline-light btn-lg">
+                            <i class="bi bi-envelope me-2"></i>Contact
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center mt-4 mt-lg-0">
+                    <i class="bi bi-laptop display-1"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+    ============================================
+    SECTION SERVICES - Cartes de présentation
+    Utilise les classes Bootstrap :
+    - row, col-md-4 : grille responsive (3 colonnes sur desktop)
+    - card : composant carte
+    - g-4 : gap (espacement) entre les colonnes
+    ============================================
+    -->
+    <section id="services" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Nos Services</h2>
+                <p class="text-muted">Des solutions adaptées à tous vos projets</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Card 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex p-3 mb-3">
+                                <i class="bi bi-code-slash text-primary fs-1"></i>
+                            </div>
+                            <h5 class="card-title fw-bold">Développement Web</h5>
+                            <p class="card-text text-muted">
+                                Création de sites web modernes et responsive avec les dernières technologies.
+                            </p>
+                            <a href="#" class="btn btn-outline-primary">En savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="bg-success bg-opacity-10 rounded-circle d-inline-flex p-3 mb-3">
+                                <i class="bi bi-phone text-success fs-1"></i>
+                            </div>
+                            <h5 class="card-title fw-bold">Applications Mobiles</h5>
+                            <p class="card-text text-muted">
+                                Développement d'applications iOS et Android performantes et intuitives.
+                            </p>
+                            <a href="#" class="btn btn-outline-success">En savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="bg-warning bg-opacity-10 rounded-circle d-inline-flex p-3 mb-3">
+                                <i class="bi bi-palette text-warning fs-1"></i>
+                            </div>
+                            <h5 class="card-title fw-bold">Design UI/UX</h5>
+                            <p class="card-text text-muted">
+                                Conception d'interfaces utilisateur élégantes et expériences mémorables.
+                            </p>
+                            <a href="#" class="btn btn-outline-warning">En savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+    ============================================
+    SECTION À PROPOS - Layout avec image
+    Utilise les classes Bootstrap :
+    - row, col-lg-6 : grille 2 colonnes
+    - order-lg-* : réorganisation sur desktop
+    - bg-light : fond clair
+    ============================================
+    -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <span class="badge bg-primary mb-3">À propos</span>
+                    <h2 class="fw-bold mb-4">Qui sommes-nous ?</h2>
+                    <p class="text-muted mb-4">
+                        Nous sommes une équipe passionnée par le développement web et les nouvelles technologies.
+                        Notre mission est de créer des expériences digitales exceptionnelles pour nos clients.
+                    </p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            Expertise technique reconnue
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            Accompagnement personnalisé
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            Solutions sur mesure
+                        </li>
+                    </ul>
+                    <a href="#" class="btn btn-primary mt-3">En savoir plus</a>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <div class="bg-primary bg-opacity-10 rounded-4 p-5">
+                        <i class="bi bi-people-fill display-1 text-primary"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+    ============================================
+    SECTION CONTACT - Formulaire de contact
+    Utilise les classes Bootstrap :
+    - form-control, form-label : styles formulaire
+    - row, col-md-6 : grille pour les champs
+    ============================================
+    -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="text-center mb-5">
+                        <h2 class="fw-bold">Contactez-nous</h2>
+                        <p class="text-muted">Nous répondons sous 24h</p>
+                    </div>
+
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="nom" class="form-label">Nom</label>
+                                <input type="text" class="form-control" id="nom" placeholder="Votre nom">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="votre@email.com">
+                            </div>
+                            <div class="col-12">
+                                <label for="sujet" class="form-label">Sujet</label>
+                                <input type="text" class="form-control" id="sujet" placeholder="Sujet de votre message">
+                            </div>
+                            <div class="col-12">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" rows="5"
+                                    placeholder="Votre message..."></textarea>
+                            </div>
+                            <div class="col-12 text-center">
+                                <button type="submit" class="btn btn-primary btn-lg px-5">
+                                    <i class="bi bi-send me-2"></i>Envoyer
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+    ============================================
+    FOOTER - Pied de page
+    Utilise les classes Bootstrap :
+    - text-white, bg-dark : thème sombre
+    - row, col-md-4 : grille 3 colonnes
+    ============================================
+    -->
+    <footer class="text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5 class="fw-bold mb-3">
+                        <i class="bi bi-bootstrap-fill me-2"></i>MonSite
+                    </h5>
+                    <p class="text-white-50">
+                        Solutions digitales innovantes pour votre entreprise.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="fw-bold mb-3">Liens rapides</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Accueil</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Services</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">À propos</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="fw-bold mb-3">Suivez-nous</h5>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white fs-4"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white fs-4"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-white fs-4"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="text-white fs-4"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 border-secondary">
+            <div class="text-center text-white-50">
+                <small>&copy; 2025 MonSite. Tous droits réservés. Fait avec <i class="bi bi-heart-fill text-danger"></i>
+                    et Bootstrap 5</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JavaScript Bundle avec Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
