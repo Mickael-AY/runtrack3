@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CaféSpot - Découvrez les meilleurs cafés</title>
+    <!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <!-- Materialize CSS CDN v1.0.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+
+<body class="grey lighten-4">
+    <!-- Header / Navbar -->
+    <header>
+        <nav class="white z-depth-0">
+            <div class="nav-wrapper container">
+                <!-- Logo -->
+                <a href="index.html" class="brand-logo left valign-wrapper brown-text text-darken-2">
+                    <i class="material-icons circle brown lighten-1 white-text"
+                        style="padding: 5px; border-radius: 50%; margin-right: 10px;">local_cafe</i>
+                    <span style="font-family: 'Playfair Display', serif; font-weight: 700;">CAFÉSPOT</span>
+                </a>
+                <!-- Mobile Menu Trigger -->
+                <a href="#" data-target="mobile-nav" class="sidenav-trigger right"><i
+                        class="material-icons brown-text">menu</i></a>
+                <!-- Desktop Links -->
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="#!" class="grey-text text-darken-1">Carte</a></li>
+                    <li><a href="#!" class="grey-text text-darken-1">Actualités</a></li>
+                    <li><a href="#!" class="grey-text text-darken-1">Favoris</a></li>
+                    <li><a href="#!" class="grey-text text-darken-1">À propos</a></li>
+                    <li><a href="#!" class="grey-text text-darken-1">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Sidenav pour mobile -->
+        <ul class="sidenav" id="mobile-nav">
+            <li>
+                <div class="user-view">
+                    <div class="background brown lighten-1"></div>
+                    <span class="white-text name" style="font-family: 'Playfair Display', serif;">CAFÉSPOT</span>
+                </div>
+            </li>
+            <li><a href="#!"><i class="material-icons">map</i>Carte</a></li>
+            <li><a href="#!"><i class="material-icons">article</i>Actualités</a></li>
+            <li><a href="#!"><i class="material-icons">favorite</i>Favoris</a></li>
+            <li><a href="#!"><i class="material-icons">info</i>À propos</a></li>
+            <li><a href="#!"><i class="material-icons">mail</i>Contact</a></li>
+        </ul>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Section: Nouveaux Cafés (grandes cartes) -->
+        <section class="section">
+            <div class="container">
+                <h6 class="grey-text text-darken-1 uppercase" style="letter-spacing: 2px; font-weight: 500;">
+                    NOUVEAUX CAFÉS
+                </h6>
+                <div class="row">
+                    <!-- Grande carte 1 -->
+                    <div class="col s12 m6">
+                        <div class="card hoverable">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&h=400&fit=crop"
+                                    alt="Café Lumière" class="responsive-img">
+                            </div>
+                            <div class="card-content">
+                                <span class="grey-text text-lighten-1 uppercase"
+                                    style="font-size: 0.8rem; letter-spacing: 1px;">Centre-ville</span>
+                                <p class="card-title black-text"
+                                    style="font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-top: 5px;">
+                                    CAFÉ LUMIÈRE
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Grande carte 2 -->
+                    <div class="col s12 m6">
+                        <div class="card hoverable">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=600&h=400&fit=crop"
+                                    alt="Le Petit Grain" class="responsive-img">
+                            </div>
+                            <div class="card-content">
+                                <span class="grey-text text-lighten-1 uppercase"
+                                    style="font-size: 0.8rem; letter-spacing: 1px;">Vieux-Port</span>
+                                <p class="card-title black-text"
+                                    style="font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-top: 5px;">
+                                    LE PETIT GRAIN
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="container">
+            <div class="divider"></div>
+        </div>
+
+        <!-- Section: Cafés Récents (petites cartes) -->
+        <section class="section">
+            <div class="container">
+                <h6 class="grey-text text-darken-1 uppercase" style="letter-spacing: 2px; font-weight: 500;">
+                    CAFÉS POPULAIRES
+                </h6>
+                <div class="row">
+                    <!-- Petite carte 1 -->
+                    <div class="col s12 m4">
+                        <div class="card hoverable">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&h=300&fit=crop"
+                                    alt="L'Artisan" class="responsive-img">
+                            </div>
+                            <div class="card-content">
+                                <span class="grey-text text-lighten-1 uppercase"
+                                    style="font-size: 0.7rem; letter-spacing: 1px;">Joliette</span>
+                                <p class="black-text"
+                                    style="font-family: 'Playfair Display', serif; font-size: 1.1rem;">L'ARTISAN</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Petite carte 2 -->
+                    <div class="col s12 m4">
+                        <div class="card hoverable">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&h=300&fit=crop"
+                                    alt="Torréfaction" class="responsive-img">
+                            </div>
+                            <div class="card-content">
+                                <span class="grey-text text-lighten-1 uppercase"
+                                    style="font-size: 0.7rem; letter-spacing: 1px;">Belle de Mai</span>
+                                <p class="black-text"
+                                    style="font-family: 'Playfair Display', serif; font-size: 1.1rem;">TORRÉFACTION</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Petite carte 3 -->
+                    <div class="col s12 m4">
+                        <div class="card hoverable">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=400&h=300&fit=crop"
+                                    alt="Moka House" class="responsive-img">
+                            </div>
+                            <div class="card-content">
+                                <span class="grey-text text-lighten-1 uppercase"
+                                    style="font-size: 0.7rem; letter-spacing: 1px;">Prado</span>
+                                <p class="black-text"
+                                    style="font-family: 'Playfair Display', serif; font-size: 1.1rem;">MOKA HOUSE</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="container">
+            <div class="divider"></div>
+        </div>
+
+        <!-- Section: Coups de coeur (cartes variées) -->
+        <section class="section">
+            <div class="container">
+                <h6 class="grey-text text-darken-1 uppercase" style="letter-spacing: 2px; font-weight: 500;">
+                    COUPS DE CŒUR
+                </h6>
+                <div class="row">
+                    <!-- Carte large -->
+                    <div class="col s12 m8">
+                        <div class="card large hoverable">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&h=500&fit=crop"
+                                    alt="Café Central" class="responsive-img">
+                                <span class="card-title"
+                                    style="font-family: 'Playfair Display', serif; background: rgba(0,0,0,0.5); width: 100%; padding: 15px;">
+                                    CAFÉ CENTRAL
+                                </span>
+                            </div>
+                            <div class="card-content">
+                                <p class="grey-text">Un lieu unique au cœur de la ville, où l'art du café rencontre une
+                                    ambiance chaleureuse.</p>
+                            </div>
+                            <div class="card-action">
+                                <a href="#!" class="brown-text">Découvrir</a>
+                                <a href="#!" class="brown-text"><i class="material-icons tiny">favorite_border</i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Cartes empilées -->
+                    <div class="col s12 m4">
+                        <div class="card hoverable">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?w=400&h=200&fit=crop"
+                                    alt="Express Bar" class="responsive-img">
+                            </div>
+                            <div class="card-content">
+                                <span class="grey-text text-lighten-1 uppercase"
+                                    style="font-size: 0.7rem;">Castellane</span>
+                                <p class="black-text" style="font-family: 'Playfair Display', serif;">EXPRESS BAR</p>
+                            </div>
+                        </div>
+                        <div class="card hoverable">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1507133750040-4a8f57021571?w=400&h=200&fit=crop"
+                                    alt="Bean & Brew" class="responsive-img">
+                            </div>
+                            <div class="card-content">
+                                <span class="grey-text text-lighten-1 uppercase"
+                                    style="font-size: 0.7rem;">Endoume</span>
+                                <p class="black-text" style="font-family: 'Playfair Display', serif;">BEAN & BREW</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="page-footer brown darken-1">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text" style="font-family: 'Playfair Display', serif;">CAFÉSPOT</h5>
+                    <p class="grey-text text-lighten-4">
+                        Découvrez les meilleurs cafés de votre ville.
+                        Partagez vos découvertes et trouvez votre prochain coup de cœur.
+                    </p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Navigation</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!">Carte</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Actualités</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Favoris</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">À propos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright brown darken-2">
+            <div class="container">
+                © 2025 CaféSpot
+                <a class="grey-text text-lighten-4 right" href="#!">
+                    <i class="material-icons tiny">arrow_upward</i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Materialize JS CDN v1.0.0 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialisation du sidenav
+            var elems = document.querySelectorAll('.sidenav');
+            M.Sidenav.init(elems);
+        });
+    </script>
+</body>
+
+</html>
