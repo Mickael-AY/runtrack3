@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Création de compte</title>
+    <!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Materialize CSS CDN v1.0.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+
+<body class="grey lighten-4">
+    <!-- Header avec Navigation -->
+    <header>
+        <nav class="teal darken-1">
+            <div class="nav-wrapper container">
+                <a href="index.html" class="brand-logo left">MonSite</a>
+                <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li class="active"><a href="index.html">Accueil</a></li>
+                    <li><a href="index.html">Inscription</a></li>
+                    <li><a href="index.html">Connexion</a></li>
+                    <li><a href="index.html"><i class="material-icons left">search</i>Rechercher</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Sidenav pour mobile -->
+        <ul class="sidenav" id="mobile-nav">
+            <li><a href="index.html"><i class="material-icons">home</i>Accueil</a></li>
+            <li><a href="index.html"><i class="material-icons">person_add</i>Inscription</a></li>
+            <li><a href="index.html"><i class="material-icons">login</i>Connexion</a></li>
+            <li><a href="index.html"><i class="material-icons">search</i>Rechercher</a></li>
+        </ul>
+    </header>
+
+    <!-- Contenu principal -->
+    <main>
+        <section class="section">
+            <div class="container">
+                <!-- Titre avec icône -->
+                <div class="row">
+                    <div class="col s12 center-align">
+                        <i class="material-icons large teal-text text-darken-1">person_add</i>
+                        <h4 class="teal-text text-darken-1">Création de compte</h4>
+                        <p class="grey-text">Remplissez le formulaire ci-dessous pour créer votre compte</p>
+                    </div>
+                </div>
+
+                <!-- Formulaire moderne avec classes Materialize -->
+                <div class="row">
+                    <div class="col s12 m10 offset-m1 l8 offset-l2">
+                        <div class="card hoverable">
+                            <div class="card-content">
+                                <span class="card-title center-align teal-text text-darken-1">
+                                    <i class="material-icons left">assignment</i>
+                                    Formulaire d'inscription
+                                </span>
+                                <div class="divider"></div>
+                                <br>
+
+                                <form action="index.html" method="post">
+
+                                    <!-- Civilité - Radio buttons avec icône -->
+                                    <div class="row">
+                                        <div class="col s12">
+                                            <h6 class="teal-text">
+                                                <i class="material-icons tiny">wc</i> Civilité
+                                            </h6>
+                                            <p>
+                                                <label>
+                                                    <input name="civilite" type="radio" value="monsieur"
+                                                        class="with-gap" checked />
+                                                    <span>Monsieur</span>
+                                                </label>
+                                            </p>
+                                            <p>
+                                                <label>
+                                                    <input name="civilite" type="radio" value="madame"
+                                                        class="with-gap" />
+                                                    <span>Madame</span>
+                                                </label>
+                                            </p>
+                                            <p>
+                                                <label>
+                                                    <input name="civilite" type="radio" value="autre"
+                                                        class="with-gap" />
+                                                    <span>Autre</span>
+                                                </label>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="divider"></div>
+                                    <br>
+
+                                    <!-- Prénom avec icône -->
+                                    <div class="row">
+                                        <div class="input-field col s12 m6">
+                                            <i class="material-icons prefix teal-text">person</i>
+                                            <input id="prenom" type="text" name="prenom" class="validate" required>
+                                            <label for="prenom">Prénom</label>
+                                            <span class="helper-text" data-error="Prénom requis" data-success="OK">Votre
+                                                prénom</span>
+                                        </div>
+                                        <!-- Nom avec icône -->
+                                        <div class="input-field col s12 m6">
+                                            <i class="material-icons prefix teal-text">badge</i>
+                                            <input id="nom" type="text" name="nom" class="validate" required>
+                                            <label for="nom">Nom</label>
+                                            <span class="helper-text" data-error="Nom requis" data-success="OK">Votre
+                                                nom de famille</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Adresse avec icône -->
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <i class="material-icons prefix teal-text">home</i>
+                                            <input id="adresse" type="text" name="adresse" class="validate" required>
+                                            <label for="adresse">Adresse</label>
+                                            <span class="helper-text" data-error="Adresse requise"
+                                                data-success="OK">Votre adresse complète</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Email avec icône -->
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <i class="material-icons prefix teal-text">email</i>
+                                            <input id="email" type="email" name="email" class="validate" required>
+                                            <label for="email">Adresse email</label>
+                                            <span class="helper-text" data-error="Email invalide"
+                                                data-success="Email valide">exemple@email.com</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Mot de passe avec icône -->
+                                    <div class="row">
+                                        <div class="input-field col s12 m6">
+                                            <i class="material-icons prefix teal-text">lock</i>
+                                            <input id="password" type="password" name="password" class="validate"
+                                                required minlength="8">
+                                            <label for="password">Mot de passe</label>
+                                            <span class="helper-text" data-error="8 caractères minimum"
+                                                data-success="OK">Minimum 8 caractères</span>
+                                        </div>
+                                        <!-- Confirmation mot de passe avec icône -->
+                                        <div class="input-field col s12 m6">
+                                            <i class="material-icons prefix teal-text">lock_outline</i>
+                                            <input id="password_confirm" type="password" name="password_confirm"
+                                                class="validate" required>
+                                            <label for="password_confirm">Confirmer le mot de passe</label>
+                                            <span class="helper-text" data-error="Doit correspondre"
+                                                data-success="OK">Retapez votre mot de passe</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="divider"></div>
+                                    <br>
+
+                                    <!-- Passions - Checkboxes avec icône -->
+                                    <div class="row">
+                                        <div class="col s12">
+                                            <h6 class="teal-text">
+                                                <i class="material-icons tiny">favorite</i> Passions
+                                            </h6>
+                                            <div class="row">
+                                                <div class="col s12 m6">
+                                                    <p>
+                                                        <label>
+                                                            <input type="checkbox" name="passions[]"
+                                                                value="informatique" class="filled-in" />
+                                                            <span><i class="material-icons tiny teal-text">computer</i>
+                                                                Informatique</span>
+                                                        </label>
+                                                    </p>
+                                                    <p>
+                                                        <label>
+                                                            <input type="checkbox" name="passions[]" value="voyages"
+                                                                class="filled-in" />
+                                                            <span><i class="material-icons tiny teal-text">flight</i>
+                                                                Voyages</span>
+                                                        </label>
+                                                    </p>
+                                                </div>
+                                                <div class="col s12 m6">
+                                                    <p>
+                                                        <label>
+                                                            <input type="checkbox" name="passions[]" value="sport"
+                                                                class="filled-in" />
+                                                            <span><i
+                                                                    class="material-icons tiny teal-text">fitness_center</i>
+                                                                Sport</span>
+                                                        </label>
+                                                    </p>
+                                                    <p>
+                                                        <label>
+                                                            <input type="checkbox" name="passions[]" value="lecture"
+                                                                class="filled-in" />
+                                                            <span><i class="material-icons tiny teal-text">menu_book</i>
+                                                                Lecture</span>
+                                                        </label>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Conditions d'utilisation -->
+                                    <div class="row">
+                                        <div class="col s12">
+                                            <p>
+                                                <label>
+                                                    <input type="checkbox" name="conditions" class="filled-in"
+                                                        required />
+                                                    <span>J'accepte les <a href="#!" class="teal-text">conditions
+                                                            d'utilisation</a></span>
+                                                </label>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+
+                            <!-- Actions du formulaire -->
+                            <div class="card-action center-align">
+                                <button class="btn-large waves-effect waves-light teal darken-1" type="submit"
+                                    form="inscription-form">
+                                    <i class="material-icons left">send</i>
+                                    Créer mon compte
+                                </button>
+                                <br><br>
+                                <p class="grey-text">
+                                    Déjà inscrit ?
+                                    <a href="index.html" class="teal-text text-darken-1">Connectez-vous</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer avec classes Materialize -->
+    <footer class="page-footer teal darken-1">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">MonSite</h5>
+                    <p class="grey-text text-lighten-4">
+                        Bienvenue sur notre plateforme de création de compte.
+                        Rejoignez notre communauté dès maintenant !
+                    </p>
+                    <a href="#!" class="btn-floating btn-small waves-effect waves-light teal lighten-1">
+                        <i class="material-icons">facebook</i>
+                    </a>
+                    <a href="#!" class="btn-floating btn-small waves-effect waves-light teal lighten-1">
+                        <i class="material-icons">alternate_email</i>
+                    </a>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Liens</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="index.html"><i
+                                    class="material-icons tiny">home</i> Accueil</a></li>
+                        <li><a class="grey-text text-lighten-3" href="index.html"><i
+                                    class="material-icons tiny">person_add</i> Inscription</a></li>
+                        <li><a class="grey-text text-lighten-3" href="index.html"><i
+                                    class="material-icons tiny">login</i> Connexion</a></li>
+                        <li><a class="grey-text text-lighten-3" href="index.html"><i
+                                    class="material-icons tiny">search</i> Rechercher</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright teal darken-2">
+            <div class="container center-align">
+                © 2025 MonSite - Tous droits réservés
+                <a class="grey-text text-lighten-4 right hide-on-small-only" href="#!">
+                    <i class="material-icons tiny">arrow_upward</i> Haut de page
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Materialize JS CDN v1.0.0 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialisation du sidenav pour mobile
+            var elems = document.querySelectorAll('.sidenav');
+            M.Sidenav.init(elems);
+        });
+    </script>
+</body>
+
+</html>

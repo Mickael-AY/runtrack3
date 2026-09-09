@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job 03 - Grilles Bootstrap</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <style>
+        /* 
+         * Job 03 - Reproduction de la maquette responsive
+         * Desktop : Layout complexe avec colonnes variées
+         * Mobile : Layout empilé adapté
+         */
+
+        body {
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .container-maquette {
+            border: 3px solid #87CEEB;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+        }
+
+        /* Bloc cyan (header) */
+        .bloc-cyan {
+            background-color: #7DD3D3;
+            min-height: 80px;
+        }
+
+        /* Blocs bleus/violets */
+        .bloc-bleu-clair {
+            background-color: #9999DD;
+        }
+
+        .bloc-bleu {
+            background-color: #7799DD;
+        }
+
+        /* Blocs roses/magentas */
+        .bloc-rose {
+            background-color: #CC77CC;
+        }
+
+        /* Blocs orange/saumon */
+        .bloc-orange {
+            background-color: #DD9988;
+        }
+
+        /* Hauteurs des blocs */
+        .bloc-header {
+            min-height: 80px;
+        }
+
+        .bloc-medium {
+            min-height: 120px;
+        }
+
+        .bloc-small {
+            min-height: 60px;
+        }
+
+        /* Espacement entre les blocs */
+        .row {
+            margin-bottom: 10px;
+        }
+
+        .row:last-child {
+            margin-bottom: 0;
+        }
+
+        [class*="col"] {
+            margin-bottom: 10px;
+        }
+
+        /* Responsive adjustments */
+        @media (min-width: 768px) {
+            [class*="col"] {
+                margin-bottom: 0;
+            }
+        }
+
+        /* Titre pour afficher le mode */
+        .mode-label {
+            text-align: center;
+            color: #666;
+            margin-top: 20px;
+            font-weight: 500;
+        }
+
+        .mode-label .desktop-label {
+            display: none;
+        }
+
+        .mode-label .mobile-label {
+            display: inline;
+        }
+
+        @media (min-width: 768px) {
+            .mode-label .desktop-label {
+                display: inline;
+            }
+
+            .mode-label .mobile-label {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+    ============================================
+    MAQUETTE RESPONSIVE - GRILLES BOOTSTRAP
+    
+    Structure Desktop (md+):
+    - Row 1: 1 bloc cyan pleine largeur
+    - Row 2: 2 blocs bleu-clair (6+6)
+    - Row 3: 3 blocs bleu (4+4+4)
+    - Row 4: 2 blocs rose (6+6) 
+    - Row 5: 1 bloc orange petit à gauche
+    - Row 6: 1 bloc orange centré
+    - Row 7: 1 bloc orange à droite
+    
+    Structure Mobile:
+    - Tous les blocs s'empilent verticalement
+    - Certains blocs changent de taille
+    ============================================
+    -->
+
+    <div class="container container-maquette">
+
+        <!-- Row 1: Header cyan - Pleine largeur -->
+        <div class="row">
+            <div class="col-12">
+                <div class="bloc-cyan bloc-header rounded"></div>
+            </div>
+        </div>
+
+        <!-- Row 2: 2 blocs bleu-clair 
+             Desktop: 6+6 (côte à côte)
+             Mobile: 12 (empilés) -->
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <div class="bloc-bleu-clair bloc-medium rounded"></div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="bloc-bleu-clair bloc-medium rounded"></div>
+            </div>
+        </div>
+
+        <!-- Row 3: 3 blocs bleu 
+             Desktop: 4+4+4 (3 colonnes)
+             Mobile: 12 (empilés) -->
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <div class="bloc-bleu bloc-medium rounded"></div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="bloc-bleu bloc-medium rounded"></div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="bloc-bleu bloc-medium rounded"></div>
+            </div>
+        </div>
+
+        <!-- Row 4: 2 blocs rose 
+             Desktop: 6+6 (côte à côte)
+             Mobile: Premier bloc petit (6), second bloc large (12) -->
+        <div class="row">
+            <div class="col-6 col-md-6">
+                <div class="bloc-rose bloc-small rounded"></div>
+            </div>
+            <div class="col-12 col-md-6 order-md-0">
+                <div class="bloc-rose bloc-small rounded"></div>
+            </div>
+        </div>
+
+        <!-- Row 5-6-7: Blocs orange 
+             Desktop: 3 rows séparées avec positionnements différents
+             Mobile: 3 blocs côte à côte (4+4+4) -->
+
+        <!-- Desktop: 3 lignes séparées -->
+        <div class="d-none d-md-block">
+            <!-- Bloc orange à gauche -->
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="bloc-orange bloc-small rounded"></div>
+                </div>
+            </div>
+            <!-- Bloc orange centré -->
+            <div class="row">
+                <div class="col-md-3 offset-md-4">
+                    <div class="bloc-orange bloc-small rounded"></div>
+                </div>
+            </div>
+            <!-- Bloc orange à droite -->
+            <div class="row">
+                <div class="col-md-3 offset-md-9">
+                    <div class="bloc-orange bloc-small rounded"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile: 3 blocs sur une ligne -->
+        <div class="d-md-none">
+            <div class="row">
+                <div class="col-4">
+                    <div class="bloc-orange bloc-small rounded"></div>
+                </div>
+                <div class="col-4">
+                    <div class="bloc-orange bloc-small rounded"></div>
+                </div>
+                <div class="col-4">
+                    <div class="bloc-orange bloc-small rounded"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Indicateur du mode actuel -->
+    <p class="mode-label">
+        <span class="desktop-label">📺 Desktop</span>
+        <span class="mobile-label">📱 Mobile</span>
+    </p>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CleanPro - Services de Nettoyage Professionnel</title>
+    <!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <!-- Materialize CSS CDN v1.0.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+
+<body class="grey lighten-4">
+    <!-- Dropdown Services -->
+    <ul id="dropdown-services" class="dropdown-content">
+        <li><a href="#services-bureaux" class="grey-text text-darken-2"><i class="material-icons">business</i>Nettoyage
+                Bureaux</a></li>
+        <li><a href="#services-domicile" class="grey-text text-darken-2"><i class="material-icons">home</i>Ménage à
+                Domicile</a></li>
+        <li><a href="#services-vitres" class="grey-text text-darken-2"><i class="material-icons">window</i>Lavage
+                Vitres</a></li>
+        <li><a href="#services-desinfection" class="grey-text text-darken-2"><i
+                    class="material-icons">sanitizer</i>Désinfection</a></li>
+        <li><a href="#services-tapis" class="grey-text text-darken-2"><i class="material-icons">texture</i>Nettoyage
+                Tapis</a></li>
+        <li class="divider"></li>
+        <li><a href="#services-auto" class="grey-text text-darken-2"><i
+                    class="material-icons">directions_car</i>Nettoyage Auto</a></li>
+    </ul>
+
+    <!-- Dropdown Tarifs -->
+    <ul id="dropdown-tarifs" class="dropdown-content">
+        <li><a href="#tarifs" class="grey-text text-darken-2"><i class="material-icons">euro_symbol</i>Tous les
+                tarifs</a></li>
+        <li class="divider"></li>
+        <li><a href="#tarifs" class="grey-text text-darken-2">Bureaux : dès 25€/h</a></li>
+        <li><a href="#tarifs" class="grey-text text-darken-2">Domicile : dès 20€/h</a></li>
+        <li><a href="#tarifs" class="grey-text text-darken-2">Vitres : dès 5€/m²</a></li>
+        <li><a href="#tarifs" class="grey-text text-darken-2">Désinfection : dès 50€</a></li>
+        <li><a href="#tarifs" class="grey-text text-darken-2">Tapis : dès 15€/m²</a></li>
+        <li class="divider"></li>
+        <li><a href="#tarifs-auto" class="grey-text text-darken-2">Nettoyage Auto : dès 29€</a></li>
+    </ul>
+
+    <!-- Header / Navbar -->
+    <header>
+        <nav class="white z-depth-1">
+            <div class="nav-wrapper container">
+                <!-- Logo -->
+                <a href="index.html" class="brand-logo left valign-wrapper cyan-text text-darken-2">
+                    <i class="material-icons circle cyan darken-1 white-text"
+                        style="padding: 5px; border-radius: 50%; margin-right: 10px;">cleaning_services</i>
+                    <span style="font-family: 'Montserrat', sans-serif; font-weight: 700;">CLEANPRO</span>
+                </a>
+                <!-- Mobile Menu Trigger -->
+                <a href="#" data-target="mobile-nav" class="sidenav-trigger right"><i
+                        class="material-icons cyan-text">menu</i></a>
+                <!-- Desktop Links -->
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="#accueil" class="grey-text text-darken-1">Accueil</a></li>
+                    <li><a class="dropdown-trigger grey-text text-darken-1" href="#!" data-target="dropdown-services">
+                            Services<i class="material-icons right">arrow_drop_down</i>
+                        </a></li>
+                    <li><a class="dropdown-trigger grey-text text-darken-1" href="#!" data-target="dropdown-tarifs">
+                            Tarifs<i class="material-icons right">arrow_drop_down</i>
+                        </a></li>
+                    <li><a href="#a-propos" class="grey-text text-darken-1">À propos</a></li>
+                    <li><a href="#contact" class="grey-text text-darken-1">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Sidenav pour mobile -->
+        <ul class="sidenav" id="mobile-nav">
+            <li>
+                <div class="user-view">
+                    <div class="background cyan darken-1"></div>
+                    <span class="white-text name" style="font-family: 'Montserrat', sans-serif;">CLEANPRO</span>
+                    <span class="white-text email">Services de nettoyage professionnel</span>
+                </div>
+            </li>
+            <li><a href="#accueil"><i class="material-icons">home</i>Accueil</a></li>
+            <li>
+                <div class="divider"></div>
+            </li>
+            <li><a class="subheader">Services</a></li>
+            <li><a href="#services-bureaux"><i class="material-icons">business</i>Nettoyage Bureaux</a></li>
+            <li><a href="#services-domicile"><i class="material-icons">home</i>Ménage à Domicile</a></li>
+            <li><a href="#services-vitres"><i class="material-icons">window</i>Lavage Vitres</a></li>
+            <li><a href="#services-desinfection"><i class="material-icons">sanitizer</i>Désinfection</a></li>
+            <li><a href="#services-tapis"><i class="material-icons">texture</i>Nettoyage Tapis</a></li>
+            <li><a href="#services-auto"><i class="material-icons">directions_car</i>Nettoyage Auto</a></li>
+            <li>
+                <div class="divider"></div>
+            </li>
+            <li><a href="#tarifs"><i class="material-icons">euro_symbol</i>Tarifs</a></li>
+            <li><a href="#a-propos"><i class="material-icons">info</i>À propos</a></li>
+            <li><a href="#contact"><i class="material-icons">mail</i>Contact</a></li>
+        </ul>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Section Accueil -->
+        <section id="accueil" class="section cyan darken-1 white-text">
+            <div class="container center-align">
+                <i class="material-icons large">cleaning_services</i>
+                <h3 style="font-family: 'Montserrat', sans-serif;">Bienvenue chez CleanPro</h3>
+                <p class="flow-text">Votre partenaire propreté pour particuliers et professionnels</p>
+                <a href="#services-bureaux" class="btn-large waves-effect waves-light white cyan-text text-darken-2">
+                    <i class="material-icons left">visibility</i>Découvrir nos services
+                </a>
+            </div>
+        </section>
+
+        <!-- Section: Services Bureaux -->
+        <section id="services-bureaux" class="section">
+            <div class="container">
+                <h5 class="cyan-text text-darken-2" style="font-family: 'Montserrat', sans-serif;">
+                    <i class="material-icons">business</i> NETTOYAGE BUREAUX
+                </h5>
+                <div class="row">
+                    <div class="col s12 m6">
+                        <div class="card hoverable">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&h=400&fit=crop"
+                                    alt="Nettoyage Bureau">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title">Entreprises & Locaux</span>
+                                <p>Nettoyage complet de vos espaces de travail : bureaux, salles de réunion, sanitaires,
+                                    cuisines.</p>
+                                <br>
+                                <span class="chip cyan white-text">Dès 25€/heure</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6">
+                        <ul class="collection with-header">
+                            <li class="collection-header">
+                                <h6>Prestations incluses</h6>
+                            </li>
+                            <li class="collection-item"><i class="material-icons tiny cyan-text">check</i> Dépoussiérage
+                                mobilier</li>
+                            <li class="collection-item"><i class="material-icons tiny cyan-text">check</i> Aspiration &
+                                lavage sols</li>
+                            <li class="collection-item"><i class="material-icons tiny cyan-text">check</i> Nettoyage
+                                sanitaires</li>
+                            <li class="collection-item"><i class="material-icons tiny cyan-text">check</i> Vidage
+                                poubelles</li>
+                            <li class="collection-item"><i class="material-icons tiny cyan-text">check</i> Nettoyage
+                                cuisine</li>
+                            <li class="collection-item"><i class="material-icons tiny cyan-text">check</i> Désinfection
+                                surfaces</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="divider"></div>
+        </div>
+
+        <!-- Section: Ménage à Domicile -->
+        <section id="services-domicile" class="section">
+            <div class="container">
+                <h5 class="cyan-text text-darken-2" style="font-family: 'Montserrat', sans-serif;">
+                    <i class="material-icons">home</i> MÉNAGE À DOMICILE
+                </h5>
+                <div class="row">
+                    <div class="col s12 m6">
+                        <ul class="collection with-header">
+                            <li class="collection-header">
+                                <h6>Prestations incluses</h6>
+                            </li>
+                            <li class="collection-item"><i class="material-icons tiny cyan-text">check</i> Nettoyage
+                                toutes pièces</li>
+                            <li class="collection-item"><i class="material-icons tiny cyan-text">check</i> Cuisine &
+                                salle de bain</li>
+                            <li class="collection-item"><i class="material-icons tiny cyan-text">check</i> Repassage (en
+                                option)</li>
+                            <li class="collection-item"><i class="material-icons tiny cyan-text">check</i> Changement
+                                draps</li>
+                            <li class="collection-item"><i class="material-icons tiny cyan-text">check</i> Nettoyage
+                                électroménager</li>
+                        </ul>
+                    </div>
+                    <div class="col s12 m6">
+                        <div class="card hoverable">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1558317374-067fb5f30001?w=600&h=400&fit=crop"
+                                    alt="Ménage Domicile">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title">Particuliers</span>
+                                <p>Un intérieur propre et sain pour votre famille. Intervention ponctuelle ou régulière.
+                                </p>
+                                <br>
+                                <span class="chip cyan white-text">Dès 20€/heure</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="divider"></div>
+        </div>
+
+        <!-- Section: Services Spécialisés -->
+        <section id="services-vitres" class="section">
+            <div class="container">
+                <h5 class="cyan-text text-darken-2" style="font-family: 'Montserrat', sans-serif;">
+                    <i class="material-icons">window</i> SERVICES SPÉCIALISÉS
+                </h5>
+                <div class="row">
+                    <!-- Lavage Vitres -->
+                    <div class="col s12 m4">
+                        <div class="card hoverable">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=400&h=300&fit=crop"
+                                    alt="Vitres">
+                                <span class="card-title">Lavage Vitres</span>
+                            </div>
+                            <div class="card-content">
+                                <p>Vitres, baies vitrées, vérandas. Intérieur et extérieur.</p>
+                                <span class="chip cyan white-text">Dès 5€/m²</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Désinfection -->
+                    <div id="services-desinfection" class="col s12 m4">
+                        <div class="card hoverable">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1585421514284-efb74c2b69ba?w=400&h=300&fit=crop"
+                                    alt="Désinfection">
+                                <span class="card-title">Désinfection</span>
+                            </div>
+                            <div class="card-content">
+                                <p>Traitement antibactérien et antiviral de vos locaux.</p>
+                                <span class="chip cyan white-text">Dès 50€</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Nettoyage Tapis -->
+                    <div id="services-tapis" class="col s12 m4">
+                        <div class="card hoverable">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop"
+                                    alt="Tapis">
+                                <span class="card-title">Nettoyage Tapis</span>
+                            </div>
+                            <div class="card-content">
+                                <p>Tapis, moquettes, canapés. Extraction et shampouinage.</p>
+                                <span class="chip cyan white-text">Dès 15€/m²</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="divider"></div>
+        </div>
+
+        <!-- Section: Nettoyage Auto -->
+        <section id="services-auto" class="section grey lighten-3">
+            <div class="container">
+                <h5 class="cyan-text text-darken-2" style="font-family: 'Montserrat', sans-serif;">
+                    <i class="material-icons">directions_car</i> NETTOYAGE AUTOMOBILE
+                </h5>
+                <p class="grey-text">Un service complet pour redonner à votre véhicule son éclat d'origine.</p>
+                <div class="row">
+                    <!-- Lavage Extérieur -->
+                    <div class="col s12 m4">
+                        <div class="card hoverable">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?w=400&h=300&fit=crop"
+                                    alt="Lavage Extérieur">
+                                <span class="card-title" style="background: rgba(0,0,0,0.5);">Lavage Extérieur</span>
+                            </div>
+                            <div class="card-content">
+                                <ul>
+                                    <li><i class="material-icons tiny cyan-text">check</i> Lavage carrosserie</li>
+                                    <li><i class="material-icons tiny cyan-text">check</i> Nettoyage jantes</li>
+                                    <li><i class="material-icons tiny cyan-text">check</i> Vitres & rétroviseurs</li>
+                                    <li><i class="material-icons tiny cyan-text">check</i> Séchage manuel</li>
+                                </ul>
+                                <br>
+                                <span class="chip cyan white-text">29€</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Nettoyage Intérieur -->
+                    <div class="col s12 m4">
+                        <div class="card hoverable">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1507136566006-cfc505b114fc?w=400&h=300&fit=crop"
+                                    alt="Nettoyage Intérieur">
+                                <span class="card-title" style="background: rgba(0,0,0,0.5);">Nettoyage Intérieur</span>
+                            </div>
+                            <div class="card-content">
+                                <ul>
+                                    <li><i class="material-icons tiny cyan-text">check</i> Aspiration complète</li>
+                                    <li><i class="material-icons tiny cyan-text">check</i> Nettoyage tableau de bord
+                                    </li>
+                                    <li><i class="material-icons tiny cyan-text">check</i> Plastiques & cuirs</li>
+                                    <li><i class="material-icons tiny cyan-text">check</i> Vitres intérieures</li>
+                                </ul>
+                                <br>
+                                <span class="chip cyan white-text">39€</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Formule Complète -->
+                    <div class="col s12 m4">
+                        <div class="card hoverable cyan darken-1">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=400&h=300&fit=crop"
+                                    alt="Formule Complète">
+                                <span class="card-title" style="background: rgba(0,0,0,0.5);">Formule Complète</span>
+                            </div>
+                            <div class="card-content white-text">
+                                <ul>
+                                    <li><i class="material-icons tiny">star</i> Extérieur + Intérieur</li>
+                                    <li><i class="material-icons tiny">star</i> Shampouinage sièges</li>
+                                    <li><i class="material-icons tiny">star</i> Traitement cuir</li>
+                                    <li><i class="material-icons tiny">star</i> Désodorisant</li>
+                                </ul>
+                                <br>
+                                <span class="chip white cyan-text text-darken-2"><strong>79€</strong></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="divider"></div>
+        </div>
+
+        <!-- Section: Tarifs -->
+        <section id="tarifs" class="section">
+            <div class="container">
+                <h5 class="cyan-text text-darken-2" style="font-family: 'Montserrat', sans-serif;">
+                    <i class="material-icons">euro_symbol</i> NOS TARIFS
+                </h5>
+                <div class="row">
+                    <div class="col s12">
+                        <table class="striped highlight responsive-table">
+                            <thead class="cyan white-text">
+                                <tr>
+                                    <th>Service</th>
+                                    <th>Description</th>
+                                    <th>Tarif</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><i class="material-icons tiny cyan-text">business</i> Nettoyage Bureaux</td>
+                                    <td>Entretien complet des locaux professionnels</td>
+                                    <td><strong>Dès 25€/heure</strong></td>
+                                </tr>
+                                <tr>
+                                    <td><i class="material-icons tiny cyan-text">home</i> Ménage à Domicile</td>
+                                    <td>Nettoyage maison / appartement</td>
+                                    <td><strong>Dès 20€/heure</strong></td>
+                                </tr>
+                                <tr>
+                                    <td><i class="material-icons tiny cyan-text">window</i> Lavage Vitres</td>
+                                    <td>Vitres, baies vitrées, vérandas</td>
+                                    <td><strong>Dès 5€/m²</strong></td>
+                                </tr>
+                                <tr>
+                                    <td><i class="material-icons tiny cyan-text">sanitizer</i> Désinfection</td>
+                                    <td>Traitement antibactérien locaux</td>
+                                    <td><strong>Dès 50€</strong></td>
+                                </tr>
+                                <tr>
+                                    <td><i class="material-icons tiny cyan-text">texture</i> Nettoyage Tapis</td>
+                                    <td>Tapis, moquettes, canapés</td>
+                                    <td><strong>Dès 15€/m²</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Tarifs Auto -->
+                <div id="tarifs-auto" class="row">
+                    <div class="col s12">
+                        <h6 class="grey-text"><i class="material-icons tiny">directions_car</i> Tarifs Nettoyage Auto
+                        </h6>
+                        <table class="striped highlight responsive-table">
+                            <thead class="cyan darken-2 white-text">
+                                <tr>
+                                    <th>Formule</th>
+                                    <th>Détails</th>
+                                    <th>Tarif</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Lavage Extérieur</td>
+                                    <td>Carrosserie, jantes, vitres, séchage</td>
+                                    <td><strong>29€</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Nettoyage Intérieur</td>
+                                    <td>Aspiration, tableau de bord, plastiques</td>
+                                    <td><strong>39€</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Formule Complète</td>
+                                    <td>Ext + Int + Shampouinage + Désodorisant</td>
+                                    <td><strong>79€</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Option Traitement Cuir</td>
+                                    <td>Nettoyage et hydratation cuir</td>
+                                    <td><strong>+20€</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Option Polissage</td>
+                                    <td>Lustrage carrosserie</td>
+                                    <td><strong>+35€</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="divider"></div>
+        </div>
+
+        <!-- Section: À Propos -->
+        <section id="a-propos" class="section">
+            <div class="container">
+                <h5 class="cyan-text text-darken-2" style="font-family: 'Montserrat', sans-serif;">
+                    <i class="material-icons">info</i> À PROPOS DE CLEANPRO
+                </h5>
+                <div class="row">
+                    <div class="col s12 m6">
+                        <p class="flow-text grey-text text-darken-1">
+                            Depuis 2010, CleanPro accompagne les particuliers et les entreprises dans l'entretien de
+                            leurs espaces.
+                        </p>
+                        <p>
+                            Notre équipe de professionnels formés utilise des produits écologiques et des techniques
+                            modernes pour garantir un résultat impeccable.
+                        </p>
+                        <ul class="collection">
+                            <li class="collection-item avatar">
+                                <i class="material-icons circle cyan">verified</i>
+                                <span class="title"><strong>+15 ans d'expérience</strong></span>
+                                <p>Une expertise reconnue dans le secteur</p>
+                            </li>
+                            <li class="collection-item avatar">
+                                <i class="material-icons circle cyan">groups</i>
+                                <span class="title"><strong>+50 employés</strong></span>
+                                <p>Une équipe formée et motivée</p>
+                            </li>
+                            <li class="collection-item avatar">
+                                <i class="material-icons circle cyan">eco</i>
+                                <span class="title"><strong>100% Produits verts</strong></span>
+                                <p>Respectueux de l'environnement</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col s12 m6">
+                        <h6><i class="material-icons tiny">business</i> Ils nous font confiance</h6>
+                        <div class="row">
+                            <div class="col s6">
+                                <div class="card-panel center-align hoverable">
+                                    <i class="material-icons large grey-text">apartment</i>
+                                    <p><strong>Carrefour</strong></p>
+                                    <span class="grey-text">Grande distribution</span>
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <div class="card-panel center-align hoverable">
+                                    <i class="material-icons large grey-text">local_hospital</i>
+                                    <p><strong>Clinique du Parc</strong></p>
+                                    <span class="grey-text">Santé</span>
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <div class="card-panel center-align hoverable">
+                                    <i class="material-icons large grey-text">school</i>
+                                    <p><strong>Université Aix</strong></p>
+                                    <span class="grey-text">Éducation</span>
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <div class="card-panel center-align hoverable">
+                                    <i class="material-icons large grey-text">hotel</i>
+                                    <p><strong>Hôtel Mercure</strong></p>
+                                    <span class="grey-text">Hôtellerie</span>
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <div class="card-panel center-align hoverable">
+                                    <i class="material-icons large grey-text">storefront</i>
+                                    <p><strong>BNP Paribas</strong></p>
+                                    <span class="grey-text">Banque</span>
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <div class="card-panel center-align hoverable">
+                                    <i class="material-icons large grey-text">restaurant</i>
+                                    <p><strong>McDonald's</strong></p>
+                                    <span class="grey-text">Restauration</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="divider"></div>
+        </div>
+
+        <!-- Section: Contact -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h5 class="cyan-text text-darken-2" style="font-family: 'Montserrat', sans-serif;">
+                    <i class="material-icons">mail</i> CONTACTEZ-NOUS
+                </h5>
+                <div class="row">
+                    <div class="col s12 m6">
+                        <div class="card-panel">
+                            <form>
+                                <div class="row">
+                                    <div class="input-field col s12 m6">
+                                        <i class="material-icons prefix cyan-text">person</i>
+                                        <input id="contact-nom" type="text" class="validate" required>
+                                        <label for="contact-nom">Nom</label>
+                                    </div>
+                                    <div class="input-field col s12 m6">
+                                        <i class="material-icons prefix cyan-text">phone</i>
+                                        <input id="contact-tel" type="tel" class="validate" required>
+                                        <label for="contact-tel">Téléphone</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <i class="material-icons prefix cyan-text">email</i>
+                                        <input id="contact-email" type="email" class="validate" required>
+                                        <label for="contact-email">Email</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <i class="material-icons prefix cyan-text">subject</i>
+                                        <select id="contact-service">
+                                            <option value="" disabled selected>Choisir un service</option>
+                                            <option value="bureaux">Nettoyage Bureaux</option>
+                                            <option value="domicile">Ménage à Domicile</option>
+                                            <option value="vitres">Lavage Vitres</option>
+                                            <option value="desinfection">Désinfection</option>
+                                            <option value="tapis">Nettoyage Tapis</option>
+                                            <option value="auto">Nettoyage Auto</option>
+                                            <option value="autre">Autre demande</option>
+                                        </select>
+                                        <label>Service souhaité</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <i class="material-icons prefix cyan-text">message</i>
+                                        <textarea id="contact-message" class="materialize-textarea"></textarea>
+                                        <label for="contact-message">Votre message</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s12 center-align">
+                                        <button class="btn-large waves-effect waves-light cyan darken-1" type="submit">
+                                            <i class="material-icons left">send</i>Envoyer
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col s12 m6">
+                        <div class="card-panel cyan darken-1 white-text">
+                            <h6><i class="material-icons">location_on</i> Nos coordonnées</h6>
+                            <p><i class="material-icons tiny">place</i> 123 Avenue de la Propreté, 13001 Marseille</p>
+                            <p><i class="material-icons tiny">phone</i> 01 23 45 67 89</p>
+                            <p><i class="material-icons tiny">phone_android</i> 06 12 34 56 78</p>
+                            <p><i class="material-icons tiny">email</i> contact@cleanpro.fr</p>
+                            <p><i class="material-icons tiny">schedule</i> Lun-Ven : 8h-19h | Sam : 9h-17h</p>
+                            <div class="divider" style="margin: 15px 0; background: rgba(255,255,255,0.3);"></div>
+                            <h6><i class="material-icons">share</i> Suivez-nous</h6>
+                            <a href="#!" class="btn-floating waves-effect waves-light white cyan-text"><i
+                                    class="material-icons">facebook</i></a>
+                            <a href="#!" class="btn-floating waves-effect waves-light white cyan-text"><i
+                                    class="material-icons">camera_alt</i></a>
+                            <a href="#!" class="btn-floating waves-effect waves-light white cyan-text"><i
+                                    class="material-icons">alternate_email</i></a>
+                        </div>
+                        <!-- Google Maps placeholder -->
+                        <div class="card-panel grey lighten-2 center-align">
+                            <i class="material-icons large grey-text">map</i>
+                            <p class="grey-text">Carte Google Maps</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="section cyan darken-1">
+            <div class="container center-align">
+                <h5 class="white-text" style="font-family: 'Montserrat', sans-serif;">Besoin d'un devis gratuit ?</h5>
+                <p class="white-text">Contactez-nous dès maintenant pour un espace propre et sain !</p>
+                <a class="btn-large waves-effect waves-light white cyan-text text-darken-2" href="tel:0123456789">
+                    <i class="material-icons left">phone</i>
+                    01 23 45 67 89
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="page-footer cyan darken-2">
+        <div class="container">
+            <div class="row">
+                <div class="col l4 s12">
+                    <h5 class="white-text" style="font-family: 'Montserrat', sans-serif;">CLEANPRO</h5>
+                    <p class="grey-text text-lighten-4">
+                        Votre partenaire propreté depuis 2010. Particuliers et professionnels.
+                    </p>
+                </div>
+                <div class="col l2 s6">
+                    <h6 class="white-text">Services</h6>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#services-bureaux">Bureaux</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#services-domicile">Domicile</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#services-vitres">Vitres</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#services-auto">Auto</a></li>
+                    </ul>
+                </div>
+                <div class="col l2 s6">
+                    <h6 class="white-text">Navigation</h6>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#accueil">Accueil</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#tarifs">Tarifs</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#a-propos">À propos</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col l4 s12">
+                    <h6 class="white-text">Contact</h6>
+                    <p class="grey-text text-lighten-4">
+                        <i class="material-icons tiny">phone</i> 01 23 45 67 89<br>
+                        <i class="material-icons tiny">email</i> contact@cleanpro.fr<br>
+                        <i class="material-icons tiny">place</i> 123 Av. Propreté, 13001 Marseille
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright cyan darken-3">
+            <div class="container">
+                © 2025 CleanPro - Tous droits réservés
+                <a class="grey-text text-lighten-4 right" href="#accueil">
+                    <i class="material-icons tiny">arrow_upward</i> Haut
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Materialize JS CDN v1.0.0 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Sidenav
+            var sidenavElems = document.querySelectorAll('.sidenav');
+            M.Sidenav.init(sidenavElems);
+
+            // Dropdown
+            var dropdownElems = document.querySelectorAll('.dropdown-trigger');
+            M.Dropdown.init(dropdownElems, {
+                hover: true,
+                coverTrigger: false,
+                constrainWidth: false
+            });
+
+            // Select
+            var selectElems = document.querySelectorAll('select');
+            M.FormSelect.init(selectElems);
+        });
+    </script>
+</body>
+
+</html>

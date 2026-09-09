@@ -4,14 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Konami</title>
+    <title>Job 02 - JSON Value Key</title>
 </head>
 
 <body>
-
-
-
-    <script src="./script.js"></script>
+    <!-- Inclusion du script JavaScript -->
+    <script src="script.js"></script>
 </body>
 
 </html>
